@@ -1,0 +1,480 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+}
+
+:root {  /* the "--" before variable/custom property name is necessary */
+    --ff-primary: 'Source Sans Pro', sans-serif; /* ff = font family*/
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300; /*fw = font weight*/
+    --fw-bold: 900;
+    
+    --clr-light: #fff; /*clr = color*/
+    --clr-dark: #303030;
+    /* --clr-accent: #e016cf; */
+    --clr-accent: #F8D703;
+    
+    --fs-h1: 3rem; /* fs = font size */
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),  /* bs = box shadow */
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 800px) { /* auto changes the font size when screen is 800px */
+  :root {
+      --fs-h1: 4.5rem;
+      --fs-h2: 3.75rem;
+      --fs-h3: 1.5rem;
+      --fs-body: 1.125rem;
+  }
+}
+
+/* General styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--clr-light); /* var is calling the preset "variables" in :root */
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+section {
+  padding: 5em 2em; /* keeps things from touching the sides of the screen */
+}
+
+img {
+  display: block;
+  max-width: 100%; /* 100% keeps pics from being larger than their parent object */
+}
+
+strong { font-weight: var(--fw-bold) } /* affects everything enclosed in strong tags */
+
+:focus {               /* outline box on btn when clicked */
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: .5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out; /* amout of time it takes to grow and shrink when hover */
+}
+
+.btn:hover {
+  transform: scale(1.3); /* scale how large button grows with hover */
+}
+
+/* Typography*/
+
+h1,
+h2,
+h3 {
+    line-height: 1; /* these rules apply to h1, h2 and h3*/
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) } 
+
+
+.section__title {
+    margin-bottom: .25em; /* em is relevant to font size */
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+  display: block;                  /* block makes name in title be on it's own line */
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em; /* gives space between subtitles */
+}
+
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+}
+
+
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.nav {
+  position: fixed;
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  
+  transform: translateX(100%);  /* makes navbar disappear */
+  transition: transform 250ms cubic-bezier(.5, 0, .5, 1);  
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;  /* using flex allows the use of justify content */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: inherit;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--clr-accent);
+}
+
+.nav-toggle {
+  padding: .5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
+
+                        /* .nav_open class will only exist when .nav-toggle is clicked */
+.nav-open .nav {
+  transform: translateX(0);  /* makes nav reappear */
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(.625turn);   /* spins hamburger */ 
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px); /* turns hamburger into x */
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: var(--clr-accent);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; } 
+
+
+/* Intro section */
+
+.intro {
+  position: relative;
+}
+
+.intro__img {
+  box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+  display: inline-block;
+}
+
+@media (min-width: 600px) { /* adjust min-width at intervals of above 300px, above 600px, above 900px */
+  .intro {                  /* all within this @media query apply when screen is larger than 600px */
+    display: grid;
+    width: min-content; 
+    margin: 0 auto; /*  keeps centered */
+    grid-column-gap: 1em;
+    grid-template-areas: 
+        "img subtitle"
+        "img title";
+    grid-template-columns: min-content max-content; 
+  }
+
+  .intro__img {
+      grid-area: img;
+      min-width: 250px; /* set so image doesn't disappear in smaller windows */
+      position: relative;
+      z-index: 2; /* z-index dictates which objects are on top of each other*/
+  }    
+
+  .section__subtitle--intro {
+      align-self: start;
+      grid-column: -1 / 1;
+      grid-row: 2;
+      text-align: right;
+      position: relative;
+      left: -1.5em; /* adjusts how far the bar sticks out from the image on the left side */
+      width: calc(100% + 1.5em); /* adjusts width to match title*/
+  }
+}
+
+
+/*  My services section  */
+
+.my-services {
+  background-color: var(--clr-dark); /* background color and image are both defined incase the image does not load*/
+  background-image: url(../img/serious-delivery.jpeg);
+  background-size: cover;                      /* use backgroud longhand spelling on color, image and size */
+  background-blend-mode: multiply; /**darkens background*/
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__title--services { /* "What I do"*/
+  color: var(--clr-accent);
+  position: relative;
+}
+
+.section__title--services::after { /*bar underneath title */
+  content: ''; /* pseudo elements need a content or they will not appear */
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  opacity: 0.25;
+}
+
+.services {  
+  margin-bottom: 4em; /* space between botton of text columns and top of button */
+}
+
+.service {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .services {
+      display: flex; /* flex creates columns of items within div */
+      max-width: 1000px; /* dictates how far the columns will stretch outward */
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .service + .service { /* adds a margin to the left between siblings. */
+      margin-left: 2em;
+  }
+}
+
+
+/* About me section */
+
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__img {
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .about-me {
+      display: grid;
+      grid-template-columns: 1fr 200px;  /* "1fr" = size of first column, 200px = size second column. 2 columns total */
+      grid-template-areas: 
+          "title img"          /* each " " is a row. title will be left & img right */
+          "subtitle img"    /* middle row */
+          "text img";       /* bottom row */
+      grid-column-gap: 2em;
+  }
+  
+  .section__title--about {
+      grid-area: title; /* refers to the "title" in "grid-template-areas" */
+  }
+  
+  .section__subtitle--about { /* no grid area because we want it to span under img*/
+      grid-column: 1 / -1; /* spans across entire page */
+      grid-row: 2;
+      position: relative;
+      left: -1em;
+      width: calc(100% + 2em);
+      padding-left: 1em;
+      padding-right: calc(200px + 4em); /* keeps text from running under img */
+  }
+  
+  .about-me__img {
+      grid-area: img;   /* refers to the "img" in "grid-template-areas" */
+      position: relative;
+      z-index: 2;
+  }
+}
+
+/* My Work */
+
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;    
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* autofit needs minmax */
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.portfolio__item {
+  /* background: var(--clr-accent); */
+  background: var(--clr-dark);
+  overflow: hidden;   /* hidden so that borders don't grow larger than div size */
+}
+
+.portfolio__img {
+  transition: 
+      transform 750ms cubic-bezier(.5, 0, .5, 1), /* images grow and change color when hovering */
+      opacity 250ms linear;
+
+      height: 300px;  /* ?? how do I get these images to look better?? */
+      width: 300px;    
+}
+
+.portfolio__item:focus {
+  position: relative;
+  z-index: 2;    /* puts outline box above other items */
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+  transform: scale(1.2);
+  opacity: .5; /* amout of background color that shows through */
+}
+
+
+/* footer */
+.footer {
+  background: #111;
+  color: var(--clr-accent);
+  text-align: center;
+  padding: 2.5em 0;
+  font-size: var(--fs-h3);
+
+}
+
+.footer a { 
+  color: inherit; /* inherit makes sure that any link in the footer will be the same as footer class*/
+  text-decoration: none;
+}
+
+.footer__link {
+  font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+  opacity: .7;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.social-list {
+  list-style: none;  /* removes list dots*/
+  display: flex;     /* separates items into columns */
+  justify-content: center;
+  margin: 2em 0 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0 .5em;  /* 0 = top/bottom, .5em = left/right */
+}
+
+.social-list__link {
+  padding: .5em;  /* expands the clickable space */
+}
+
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

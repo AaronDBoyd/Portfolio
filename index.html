@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--makes page size adjust to devices -->
+      <title>Aaron Boyd Portfolio Website</title>
+      <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"> <!--normalizes for different browsers-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> <!--font awesone for social media icons-->
+
+      <!-- Update these with your own fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="css/style.css">
+
+    </head>  
+    <body>
+      <header>
+        <div class="logo">
+          <img src="img/Logo_black_yellow.png" alt="">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation"> <!--aria-label describes what the button is used for-->
+          <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li> <!-- href links to section id-->
+            <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+            <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Introduction -->
+      <section class="intro" id="home"> <!-- id is what directs to this section from header -->
+        <h1 class="section__title section__title--intro">
+          Hi, I'm <strong>Aaron Boyd</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">full stack developer.</p>
+        <img src="img/Me_and_Zara.jpg" alt="picture of me and my dog" class="intro__img">
+      </section>
+
+      <!-- My services -->
+      <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">What I do</h2>
+        <div class="services">
+          <div class="service">
+            <h3>Design + Development</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div> <!-- / service -->
+        
+
+          <div class="service">
+            <h3>Languages</h3>
+            <p>The majority of my experience is with JavaScript. I enjoy how well rounded and capable it is. I have also worked with Ruby and C#. While I do enjoy the ease of use that Ruby offers, I also appreciate the specificity and big picture thinking that comes with coding C#.</p>
+          </div> <!-- / service -->
+          
+
+          <div class="service">
+            <h3>Technologies</h3>
+            <p>I have worked with multiple MVC frameworks such as Ruby on Rails and ASP.NET Core with C#. I have also worked with React Js and Webpack based environments. I have experience in creating and calling APIs. I've worked with SQL and NoSQL databases. </p>
+          </div> <!-- / service -->
+        </div> <!-- / services -->
+
+        <a href="#work" class="btn">My Work</a>
+      </section>
+
+      <!-- About Me -->
+      <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle  section__subtitle--about">Designer & developer based out of Las Vegas</p>
+
+        <div class="about-me__body">
+          <p>I am currently studying the fundamentals of Web development at Epicodus. I've learned how to setup back-end for web pages/apps with using data bases and APIs. I have also enjoyed setting up UI logic and designing approachable interfaces.</p>
+          <p>I have recently descovered how much I enjoy coding while following through with the course material at Epicodus. I sincerely enjoy gratification of putting together applications and working through problems. I particularly enjoy the creativity and difficulty of piecing together functional UI logic.</p>
+        </div>
+
+        <!-- <img src="img/ice-cream.jpeg" alt="a picture" class="about-me__img"> -->
+        <img src="img/paintSplat.png" alt="a picture" class="about-me__img">
+      </section>
+
+      <!--My Work -->
+      <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">My Work</h2>
+        <p class="section__subtitle section__subtitle--work">A few of my coding projects.</p>
+
+        <div class="portfolio">
+          <!-- Portfolio item 01 -->
+          <a href="project_gnf.html" class="portfolio__item">
+            <!-- <h3>Grandmas Neon Farmhouse</h3> -->
+            <img src="img\neon-grandma.png" alt="" class="portfolio__img">
+          </a>
+
+          <!-- Portfolio item 02 -->
+          <a href="project_ice_cream.html" class="portfolio__item">
+            <!-- <br/> -->
+            <!-- <h3>Ice Cream Shop</h3> -->
+            <img src="img\ice-cream.jpeg" alt="" class="portfolio__img">
+          </a>
+
+          <!-- Portfolio item 03 -->
+          <a href="project_niteoutr.html" class="portfolio__item">
+            <!-- <br/> -->
+            <!-- <h3>Nite_Outr</h3> -->
+            <img src="img\niteoutNeon.png" alt="" class="portfolio__img">
+          </a>
+
+          <!-- Portfolio item 04 -->
+          <a href="project_c_sharp.html" class="portfolio__item">
+            <!-- <br/>
+            <h3>C# Project</h3> -->
+            <img src="img\Catglasses2 (2).png" alt="" class="portfolio__img">
+          </a>
+
+          <!-- Portfolio item 05 -->
+          <!-- <a href="project_coffee_shop.html" class="portfolio__item">
+            <br/>
+            <h3>Coffee Shop POS</h3>
+            <img src="img\eLightCoffee.png" alt="Elisha" class="portfolio__img">
+          </a> -->
+
+          <!-- Portfolio item 06 -->
+          <!-- <a href="portfolio-item.html" class="portfolio__item">
+            <img src="img\catglasses3.jpg" alt="" class="portfolio__img">
+          </a> -->
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <a href="mailto:A.boyd91@yahoo.com" class="footer__link">A.boyd91@yahoo.com</a>
+        <ul class="social-list">
+            <!-- <li class="social-list__item">
+              <a class="social-list__link" href="https://codepen.io">
+                <i class="fab fa-codepen"></i>
+              </a>
+            </li> -->
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://www.linkedin.com/in/boydaarond/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <!-- <li class="social-list__item">
+              <a class="social-list__link" href="https://instagram.com">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li> -->
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://github.com/AaronDBoyd">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+        </ul>
+      </footer>
+
+      <script src="js/index.js"></script>
+
+    </body>
+  </html>
