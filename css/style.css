@@ -142,6 +142,12 @@ header {
 
 .logo {
   max-width: 100px;
+  background-color: var(--clr-accent);
+  box-shadow: rgba(248, 215, 3, 0.4) 5px 5px,
+              rgba(248, 215, 3, 0.3) 10px 10px,
+              rgba(248, 215, 3, 0.2) 15px 15px, 
+              rgba(248, 215, 3, 0.1) 20px 20px, 
+              rgba(248, 215, 3, 0.05) 25px 25px;
 }
 
 .nav {
@@ -256,6 +262,10 @@ header {
   display: inline-block;
 }
 
+
+
+
+
 @media (min-width: 600px) { /* adjust min-width at intervals of above 300px, above 600px, above 900px */
   .intro {                  /* all within this @media query apply when screen is larger than 600px */
     display: grid;
@@ -290,17 +300,19 @@ header {
 /*  My services section  */
 
 .my-services {
-  background-color: var(--clr-dark); /* background color and image are both defined incase the image does not load*/
-  background-image: url(../img/serious-delivery.jpeg);
+  background-color: black; /* background color and image are both defined incase the image does not load*/
+  /* background-image: url(../img/serious-delivery.jpeg); */
   background-size: cover;                      /* use backgroud longhand spelling on color, image and size */
   background-blend-mode: multiply; /**darkens background*/
   color: var(--clr-light);
   text-align: center;
+  position: relative;
 }
 
 .section__title--services { /* "What I do"*/
   color: var(--clr-accent);
   position: relative;
+  margin-top: 100px;
 }
 
 .section__title--services::after { /*bar underneath title */
@@ -335,6 +347,70 @@ header {
   }
 }
 
+
+.white-waves-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.white-waves-top svg {
+  position: relative;
+  display: block;
+  width: calc(113% + 1.3px);
+  height: 103px;
+  transform: rotateY(180deg);
+}
+
+.white-waves-top .shape-fill {
+  fill: #FFFFFF;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .white-waves-top svg {
+      width: calc(119% + 1.3px);
+      height: 56px;
+  }
+}
+
+
+.white-waves-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.white-waves-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(113% + 1.3px);
+  height: 103px;
+  transform: rotateY(180deg);
+}
+
+.white-waves-bottom .shape-fill {
+  fill: #FFFFFF;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .white-waves-bottom svg {
+      width: calc(119% + 1.3px);
+      height: 56px;
+  }
+}
+
+.my_work_button {
+  margin-bottom: 100px;
+}
 
 /* About me section */
 
@@ -379,18 +455,54 @@ header {
   }
 }
 
+.about-me_spacer {
+  position: relative;
+}
+
+.gray-wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.gray-wave-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(113% + 1.3px);
+  height: 133px;
+  transform: rotateY(180deg);
+}
+
+.gray-wave-bottom .shape-fill {
+  fill: #303030;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .gray-wave-bottom svg {
+      width: calc(119% + 1.3px);
+      height: 56px;
+  }
+}
+
 /* My Work */
 
 .my-work {
   background-color: var(--clr-dark);
   color: var(--clr-light);
-  text-align: center;    
+  text-align: center;   
+  position: relative; 
 }
 
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* autofit needs minmax */
   /* grid-template-columns: repeat(3, 1fr); */
+
+  margin-bottom: 150px;
 }
 
 .portfolio__item {
@@ -418,6 +530,29 @@ header {
   transform: scale(1.2);
   opacity: .5; /* amout of background color that shows through */
 }
+
+#visual {
+  position:absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+@media (max-width: 1440px) {
+  #visual {
+    bottom: -120px;
+  }
+}
+
+@media (max-width: 770px) {
+  #visual {
+    bottom: -150px;
+  }
+}
+
+
 
 
 /* footer */

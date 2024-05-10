@@ -1,160 +1,267 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--makes page size adjust to devices -->
-      <title>Aaron Boyd Portfolio Website</title>
-      <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"> <!--normalizes for different browsers-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> <!--font awesone for social media icons-->
+<html lang="en">
 
-      <!-- Update these with your own fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--makes page size adjust to devices -->
+  <title>Aaron Boyd Portfolio Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <!--normalizes for different browsers-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+  <!--font awesone for social media icons-->
 
-      <link rel="stylesheet" href="css/style.css">
+  <!-- Update these with your own fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    rel="stylesheet">
 
-    </head>  
-    <body>
-      <header>
-        <div class="logo">
-          <img src="img/Logo_black_yellow.png" alt="">
-        </div>
-        <button class="nav-toggle" aria-label="toggle navigation"> <!--aria-label describes what the button is used for-->
-          <span class="hamburger"></span>
-        </button>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li> <!-- href links to section id-->
-            <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-            <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-          </ul>
-        </nav>
-      </header>
+  <link rel="stylesheet" href="css/style.css">
 
-      <!-- Introduction -->
-      <section class="intro" id="home"> <!-- id is what directs to this section from header -->
-        <h1 class="section__title section__title--intro">
-          Hi, I'm <strong>Aaron Boyd</strong>
-        </h1>
-        <p class="section__subtitle section__subtitle--intro">full stack developer.</p>
-        <img src="img/Me_and_Zara.jpg" alt="picture of me and my dog" class="intro__img">
-      </section>
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
 
-      <!-- My services -->
-      <section class="my-services" id="services">
-        <h2 class="section__title section__title--services">What I do</h2>
-        <div class="services">
-          <div class="service">
-            <h3>Design + Development</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div> <!-- / service -->
-        
+</head>
 
-          <div class="service">
-            <h3>Languages</h3>
-            <p>The majority of my experience is with JavaScript. I enjoy how well rounded and capable it is. I have also worked with Ruby and C#. While I do enjoy the ease of use that Ruby offers, I also appreciate the specificity and big picture thinking that comes with coding C#.</p>
-          </div> <!-- / service -->
-          
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/Logo_black_yellow.png" alt="">
+    </div>
+    <button class="nav-toggle" aria-label="toggle navigation"> <!--aria-label describes what the button is used for-->
+      <span class="hamburger"></span>
+    </button>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li> <!-- href links to section id-->
+        <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+        <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+      </ul>
+    </nav>
+  </header>
 
-          <div class="service">
-            <h3>Technologies</h3>
-            <p>I have worked with multiple MVC frameworks such as Ruby on Rails and ASP.NET Core with C#. I have also worked with React Js and Webpack based environments. I have experience in creating and calling APIs. I've worked with SQL and NoSQL databases. </p>
-          </div> <!-- / service -->
-        </div> <!-- / services -->
+  <!-- Introduction -->
+  <section class="intro" id="home"> <!-- id is what directs to this section from header -->
+    <h1 class="section__title section__title--intro">
+      Hi, I'm <strong>Aaron Boyd</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">full stack developer.</p>
+    <img src="img/Me_and_Zara.jpg" alt="picture of me and my dog" class="intro__img">
 
-        <a href="#work" class="btn">My Work</a>
-      </section>
 
-      <!-- About Me -->
-      <section class="about-me" id="about">
-        <h2 class="section__title section__title--about">Who I am</h2>
-        <p class="section__subtitle  section__subtitle--about">Designer & developer based out of Las Vegas</p>
 
-        <div class="about-me__body">
-          <p>I am currently studying the fundamentals of Web development at Epicodus. I've learned how to setup back-end for web pages/apps with using data bases and APIs. I have also enjoyed setting up UI logic and designing approachable interfaces.</p>
-          <p>I have recently descovered how much I enjoy coding while following through with the course material at Epicodus. I sincerely enjoy gratification of putting together applications and working through problems. I particularly enjoy the creativity and difficulty of piecing together functional UI logic.</p>
-        </div>
+  </section>
 
-        <!-- <img src="img/ice-cream.jpeg" alt="a picture" class="about-me__img"> -->
-        <img src="img/paintSplat.png" alt="a picture" class="about-me__img">
-      </section>
+  <!-- My services -->
+  <section class="my-services" id="services">
+    <h2 class="section__title section__title--services">What I do</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Design + Development</h3>
+        <p>My experience is split between developing Websites and Desktop applications. fa;lkdf aldkfa fafldld slfha;
+          aldjf alshf sshfks solfhsisn slfhsk sks oshf slghs fls floshf slf fshf slfhs slfhflshf s</p>
+      </div> <!-- / service -->
 
-      <!--My Work -->
-      <section class="my-work" id="work">
-        <h2 class="section__title section__title--work">My Work</h2>
-        <p class="section__subtitle section__subtitle--work">A few of my coding projects.</p>
 
-        <div class="portfolio">
-          <!-- Portfolio item 01 -->
-          <a href="project_gnf.html" class="portfolio__item">
-            <!-- <h3>Grandmas Neon Farmhouse</h3> -->
-            <img src="img\neon-grandma.png" alt="" class="portfolio__img">
-          </a>
+      <div class="service">
+        <h3>Languages</h3>
+        <p>The majority of my experience is with C# and the .NET Stack. I enjoy how well rounded and capable it is. I
+          have also worked with JavaScript and Ruby. While I do enjoy the ease of use that Ruby offers, I also
+          appreciate the specificity and big picture thinking that comes with coding C#.</p>
+      </div> <!-- / service -->
 
-          <!-- Portfolio item 02 -->
-          <a href="project_ice_cream.html" class="portfolio__item">
-            <!-- <br/> -->
-            <!-- <h3>Ice Cream Shop</h3> -->
-            <img src="img\ice-cream.jpeg" alt="" class="portfolio__img">
-          </a>
 
-          <!-- Portfolio item 03 -->
-          <a href="project_niteoutr.html" class="portfolio__item">
-            <!-- <br/> -->
-            <!-- <h3>Nite_Outr</h3> -->
-            <img src="img\niteoutNeon.png" alt="" class="portfolio__img">
-          </a>
+      <div class="service">
+        <h3>Technologies</h3>
+        <p>I have worked with multiple MVC frameworks such as Ruby on Rails and ASP.NET Core with C#. I have also worked
+          with React Js and Webpack based environments. I have experience in creating and calling APIs. I've worked with
+          SQL and NoSQL databases. </p>
+      </div> <!-- / service -->
+    </div> <!-- / services -->
 
-          <!-- Portfolio item 04 -->
-          <a href="project_c_sharp.html" class="portfolio__item">
-            <!-- <br/>
+    <a href="#work" class="btn my_work_button">My Work</a>
+
+
+    <div class="white-waves-top">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path id="wwt_A1"
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25" class="shape-fill"></path>
+        <path id="wwt_B1"
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5" class="shape-fill"></path>
+        <path id="wwt_C1"
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+
+
+
+    <div class="white-waves-bottom">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25" class="shape-fill"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5" class="shape-fill"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section class="about-me" id="about">
+    <h2 class="section__title section__title--about">Who I am</h2>
+    <p class="section__subtitle  section__subtitle--about">Designer & developer based out of Las Vegas</p>
+
+    <div class="about-me__body">
+      <p>I am currently studying the fundamentals of Web development at Epicodus. I've learned how to setup back-end for
+        web pages/apps with using data bases and APIs. I have also enjoyed setting up UI logic and designing
+        approachable interfaces.</p>
+      <p>I have recently descovered how much I enjoy coding while following through with the course material at
+        Epicodus. I sincerely enjoy gratification of putting together applications and working through problems. I
+        particularly enjoy the creativity and difficulty of piecing together functional UI logic.</p>
+    </div>
+
+    <!-- <img src="img/ice-cream.jpeg" alt="a picture" class="about-me__img"> -->
+    <img src="img/paintSplat.png" alt="a picture" class="about-me__img">
+
+
+  </section>
+
+  <section class="about-me_spacer">
+    <!-- <div class="gray-wave-bottom">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div> -->
+
+    <svg id="visual" viewBox="0 0 2200 340" width="2200" height="340" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+
+      <path id="gwb_1"
+        d="M0 235L14.2 230.7C28.3 226.3 56.7 217.7 84.8 200.8C113 184 141 159 169.2 138.8C197.3 118.7 225.7 103.3 253.8 112.3C282 121.3 310 154.7 338.2 167.7C366.3 180.7 394.7 173.3 423 182.7C451.3 192 479.7 218 507.8 219.3C536 220.7 564 197.3 592.2 185.2C620.3 173 648.7 172 677 168C705.3 164 733.7 157 761.8 146.2C790 135.3 818 120.7 846.2 137C874.3 153.3 902.7 200.7 930.8 199.3C959 198 987 148 1015.2 142.5C1043.3 137 1071.7 176 1100 195.8C1128.3 215.7 1156.7 216.3 1184.8 215.7C1213 215 1241 213 1269.2 212.3C1297.3 211.7 1325.7 212.3 1353.8 219.5C1382 226.7 1410 240.3 1438.2 219.2C1466.3 198 1494.7 142 1523 119.2C1551.3 96.3 1579.7 106.7 1607.8 125C1636 143.3 1664 169.7 1692.2 190.2C1720.3 210.7 1748.7 225.3 1777 214.3C1805.3 203.3 1833.7 166.7 1861.8 168.5C1890 170.3 1918 210.7 1946.2 212.3C1974.3 214 2002.7 177 2030.8 154C2059 131 2087 122 2115.2 115.7C2143.3 109.3 2171.7 105.7 2185.8 103.8L2200 102L2200 341L2185.8 341C2171.7 341 2143.3 341 2115.2 341C2087 341 2059 341 2030.8 341C2002.7 341 1974.3 341 1946.2 341C1918 341 1890 341 1861.8 341C1833.7 341 1805.3 341 1777 341C1748.7 341 1720.3 341 1692.2 341C1664 341 1636 341 1607.8 341C1579.7 341 1551.3 341 1523 341C1494.7 341 1466.3 341 1438.2 341C1410 341 1382 341 1353.8 341C1325.7 341 1297.3 341 1269.2 341C1241 341 1213 341 1184.8 341C1156.7 341 1128.3 341 1100 341C1071.7 341 1043.3 341 1015.2 341C987 341 959 341 930.8 341C902.7 341 874.3 341 846.2 341C818 341 790 341 761.8 341C733.7 341 705.3 341 677 341C648.7 341 620.3 341 592.2 341C564 341 536 341 507.8 341C479.7 341 451.3 341 423 341C394.7 341 366.3 341 338.2 341C310 341 282 341 253.8 341C225.7 341 197.3 341 169.2 341C141 341 113 341 84.8 341C56.7 341 28.3 341 14.2 341L0 341Z"
+        fill="#303030" stroke-linecap="round" stroke-linejoin="miter"></path>
+
+      <path id="gwb_2" style="visibility: hidden;"
+        d="M0 134L14.2 137C28.3 140 56.7 146 84.8 149C113 152 141 152 169.2 157.8C197.3 163.7 225.7 175.3 253.8 186C282 196.7 310 206.3 338.2 222.2C366.3 238 394.7 260 423 251.8C451.3 243.7 479.7 205.3 507.8 186.8C536 168.3 564 169.7 592.2 172.5C620.3 175.3 648.7 179.7 677 185.8C705.3 192 733.7 200 761.8 199.5C790 199 818 190 846.2 180.7C874.3 171.3 902.7 161.7 930.8 171.8C959 182 987 212 1015.2 207.7C1043.3 203.3 1071.7 164.7 1100 156C1128.3 147.3 1156.7 168.7 1184.8 173.5C1213 178.3 1241 166.7 1269.2 154C1297.3 141.3 1325.7 127.7 1353.8 120.8C1382 114 1410 114 1438.2 141C1466.3 168 1494.7 222 1523 248.7C1551.3 275.3 1579.7 274.7 1607.8 266.5C1636 258.3 1664 242.7 1692.2 232.2C1720.3 221.7 1748.7 216.3 1777 227C1805.3 237.7 1833.7 264.3 1861.8 254.3C1890 244.3 1918 197.7 1946.2 194.3C1974.3 191 2002.7 231 2030.8 233.2C2059 235.3 2087 199.7 2115.2 187C2143.3 174.3 2171.7 184.7 2185.8 189.8L2200 195L2200 341L2185.8 341C2171.7 341 2143.3 341 2115.2 341C2087 341 2059 341 2030.8 341C2002.7 341 1974.3 341 1946.2 341C1918 341 1890 341 1861.8 341C1833.7 341 1805.3 341 1777 341C1748.7 341 1720.3 341 1692.2 341C1664 341 1636 341 1607.8 341C1579.7 341 1551.3 341 1523 341C1494.7 341 1466.3 341 1438.2 341C1410 341 1382 341 1353.8 341C1325.7 341 1297.3 341 1269.2 341C1241 341 1213 341 1184.8 341C1156.7 341 1128.3 341 1100 341C1071.7 341 1043.3 341 1015.2 341C987 341 959 341 930.8 341C902.7 341 874.3 341 846.2 341C818 341 790 341 761.8 341C733.7 341 705.3 341 677 341C648.7 341 620.3 341 592.2 341C564 341 536 341 507.8 341C479.7 341 451.3 341 423 341C394.7 341 366.3 341 338.2 341C310 341 282 341 253.8 341C225.7 341 197.3 341 169.2 341C141 341 113 341 84.8 341C56.7 341 28.3 341 14.2 341L0 341Z"
+        fill="#303030" stroke-linecap="round" stroke-linejoin="miter"></path>
+    </svg>
+
+    <script>
+      const bgw = KUTE.fromTo(
+        '#gwb_1',
+        { path: '#gwb_1' },
+        { path: '#gwb_2' },
+        { repeat: 999, duration: 3000, yoyo: true }
+      ).start();
+    </script>
+  </section>
+
+  <!--My Work -->
+  <section class="my-work" id="work">
+    <h2 class="section__title section__title--work">My Work</h2>
+    <p class="section__subtitle section__subtitle--work">A few of my coding projects.</p>
+
+    <div class="portfolio">
+      <!-- Portfolio item 01 -->
+      <a href="project_gnf.html" class="portfolio__item">
+        <!-- <h3>Grandmas Neon Farmhouse</h3> -->
+        <img src="img\neon-grandma.png" alt="" class="portfolio__img">
+      </a>
+
+      <!-- Portfolio item 02 -->
+      <a href="project_ice_cream.html" class="portfolio__item">
+        <!-- <br/> -->
+        <!-- <h3>Ice Cream Shop</h3> -->
+        <img src="img\ice-cream.jpeg" alt="" class="portfolio__img">
+      </a>
+
+      <!-- Portfolio item 03 -->
+      <a href="project_niteoutr.html" class="portfolio__item">
+        <!-- <br/> -->
+        <!-- <h3>Nite_Outr</h3> -->
+        <img src="img\niteoutNeon.png" alt="" class="portfolio__img">
+      </a>
+
+      <!-- Portfolio item 04 -->
+      <a href="project_c_sharp.html" class="portfolio__item">
+        <!-- <br/>
             <h3>C# Project</h3> -->
-            <img src="img\Catglasses2 (2).png" alt="" class="portfolio__img">
-          </a>
+        <img src="img\Catglasses2 (2).png" alt="" class="portfolio__img">
+      </a>
 
-          <!-- Portfolio item 05 -->
-          <!-- <a href="project_coffee_shop.html" class="portfolio__item">
+      <!-- Portfolio item 05 -->
+      <!-- <a href="project_coffee_shop.html" class="portfolio__item">
             <br/>
             <h3>Coffee Shop POS</h3>
             <img src="img\eLightCoffee.png" alt="Elisha" class="portfolio__img">
           </a> -->
 
-          <!-- Portfolio item 06 -->
-          <!-- <a href="portfolio-item.html" class="portfolio__item">
+      <!-- Portfolio item 06 -->
+      <!-- <a href="portfolio-item.html" class="portfolio__item">
             <img src="img\catglasses3.jpg" alt="" class="portfolio__img">
           </a> -->
-        </div>
-      </section>
+    </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <a href="mailto:A.boyd91@yahoo.com" class="footer__link">A.boyd91@yahoo.com</a>
-        <ul class="social-list">
-            <!-- <li class="social-list__item">
+
+
+    <svg id="visual" viewBox="0 0 2200 340" width="2200" height="340" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+
+      <path id="black_wave1"
+        d="M0 199L14.2 203.8C28.3 208.7 56.7 218.3 84.8 231C113 243.7 141 259.3 169.2 265.7C197.3 272 225.7 269 253.8 269.8C282 270.7 310 275.3 338.2 274.3C366.3 273.3 394.7 266.7 423 267.5C451.3 268.3 479.7 276.7 507.8 282.8C536 289 564 293 592.2 278.8C620.3 264.7 648.7 232.3 677 207C705.3 181.7 733.7 163.3 761.8 148.3C790 133.3 818 121.7 846.2 119.7C874.3 117.7 902.7 125.3 930.8 142.8C959 160.3 987 187.7 1015.2 189.2C1043.3 190.7 1071.7 166.3 1100 164.7C1128.3 163 1156.7 184 1184.8 197.7C1213 211.3 1241 217.7 1269.2 210.5C1297.3 203.3 1325.7 182.7 1353.8 171.2C1382 159.7 1410 157.3 1438.2 177.5C1466.3 197.7 1494.7 240.3 1523 253.3C1551.3 266.3 1579.7 249.7 1607.8 228.2C1636 206.7 1664 180.3 1692.2 189C1720.3 197.7 1748.7 241.3 1777 235.5C1805.3 229.7 1833.7 174.3 1861.8 166.5C1890 158.7 1918 198.3 1946.2 205.2C1974.3 212 2002.7 186 2030.8 179.3C2059 172.7 2087 185.3 2115.2 184.2C2143.3 183 2171.7 168 2185.8 160.5L2200 153L2200 341L2185.8 341C2171.7 341 2143.3 341 2115.2 341C2087 341 2059 341 2030.8 341C2002.7 341 1974.3 341 1946.2 341C1918 341 1890 341 1861.8 341C1833.7 341 1805.3 341 1777 341C1748.7 341 1720.3 341 1692.2 341C1664 341 1636 341 1607.8 341C1579.7 341 1551.3 341 1523 341C1494.7 341 1466.3 341 1438.2 341C1410 341 1382 341 1353.8 341C1325.7 341 1297.3 341 1269.2 341C1241 341 1213 341 1184.8 341C1156.7 341 1128.3 341 1100 341C1071.7 341 1043.3 341 1015.2 341C987 341 959 341 930.8 341C902.7 341 874.3 341 846.2 341C818 341 790 341 761.8 341C733.7 341 705.3 341 677 341C648.7 341 620.3 341 592.2 341C564 341 536 341 507.8 341C479.7 341 451.3 341 423 341C394.7 341 366.3 341 338.2 341C310 341 282 341 253.8 341C225.7 341 197.3 341 169.2 341C141 341 113 341 84.8 341C56.7 341 28.3 341 14.2 341L0 341Z"
+        fill="#111" stroke-linecap="round" stroke-linejoin="miter"></path>
+
+      <path id="black_wave2" style="visibility: hidden;"
+        d="M0 253L14.2 258.3C28.3 263.7 56.7 274.3 84.8 264.5C113 254.7 141 224.3 169.2 213.2C197.3 202 225.7 210 253.8 204.5C282 199 310 180 338.2 174.7C366.3 169.3 394.7 177.7 423 179.8C451.3 182 479.7 178 507.8 186C536 194 564 214 592.2 209.8C620.3 205.7 648.7 177.3 677 170.5C705.3 163.7 733.7 178.3 761.8 192.3C790 206.3 818 219.7 846.2 229.8C874.3 240 902.7 247 930.8 233.2C959 219.3 987 184.7 1015.2 174.2C1043.3 163.7 1071.7 177.3 1100 183.5C1128.3 189.7 1156.7 188.3 1184.8 185C1213 181.7 1241 176.3 1269.2 185.5C1297.3 194.7 1325.7 218.3 1353.8 225.5C1382 232.7 1410 223.3 1438.2 223.7C1466.3 224 1494.7 234 1523 220.2C1551.3 206.3 1579.7 168.7 1607.8 159.2C1636 149.7 1664 168.3 1692.2 190.2C1720.3 212 1748.7 237 1777 226.2C1805.3 215.3 1833.7 168.7 1861.8 145.3C1890 122 1918 122 1946.2 139.5C1974.3 157 2002.7 192 2030.8 206C2059 220 2087 213 2115.2 220.2C2143.3 227.3 2171.7 248.7 2185.8 259.3L2200 270L2200 341L2185.8 341C2171.7 341 2143.3 341 2115.2 341C2087 341 2059 341 2030.8 341C2002.7 341 1974.3 341 1946.2 341C1918 341 1890 341 1861.8 341C1833.7 341 1805.3 341 1777 341C1748.7 341 1720.3 341 1692.2 341C1664 341 1636 341 1607.8 341C1579.7 341 1551.3 341 1523 341C1494.7 341 1466.3 341 1438.2 341C1410 341 1382 341 1353.8 341C1325.7 341 1297.3 341 1269.2 341C1241 341 1213 341 1184.8 341C1156.7 341 1128.3 341 1100 341C1071.7 341 1043.3 341 1015.2 341C987 341 959 341 930.8 341C902.7 341 874.3 341 846.2 341C818 341 790 341 761.8 341C733.7 341 705.3 341 677 341C648.7 341 620.3 341 592.2 341C564 341 536 341 507.8 341C479.7 341 451.3 341 423 341C394.7 341 366.3 341 338.2 341C310 341 282 341 253.8 341C225.7 341 197.3 341 169.2 341C141 341 113 341 84.8 341C56.7 341 28.3 341 14.2 341L0 341Z"
+        fill="#111" stroke-linecap="round" stroke-linejoin="miter"></path>
+    </svg>
+
+    <script>
+      const tween = KUTE.fromTo(
+        '#black_wave1',
+        { path: '#black_wave1' },
+        { path: '#black_wave2' },
+        { repeat: 999, duration: 3000, yoyo: true }
+      ).start();
+    </script>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="mailto:AaronDBoyd91@gmail.com" class="footer__link">AaronDBoyd91@gmail.com</a>
+    <ul class="social-list">
+      <!-- <li class="social-list__item">
               <a class="social-list__link" href="https://codepen.io">
                 <i class="fab fa-codepen"></i>
               </a>
             </li> -->
-            <li class="social-list__item">
-              <a class="social-list__link" href="https://www.linkedin.com/in/boydaarond/">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-            <!-- <li class="social-list__item">
+      <li class="social-list__item">
+        <a class="social-list__link" href="https://www.linkedin.com/in/boydaarond/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <!-- <li class="social-list__item">
               <a class="social-list__link" href="https://instagram.com">
                 <i class="fab fa-instagram"></i>
               </a>
             </li> -->
-            <li class="social-list__item">
-              <a class="social-list__link" href="https://github.com/AaronDBoyd">
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-        </ul>
-      </footer>
+      <li class="social-list__item">
+        <a class="social-list__link" href="https://github.com/AaronDBoyd">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </footer>
 
-      <script src="js/index.js"></script>
+  <script src="js/index.js"></script>
 
-    </body>
-  </html>
+</body>
+
+</html>
